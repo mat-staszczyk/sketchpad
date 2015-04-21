@@ -1,0 +1,65 @@
+body {
+	padding-top: 50px;
+}
+
+.centered {
+	float: none;
+    margin: 0 auto;
+}
+
+.btn-group {
+	margin-bottom: 20px;
+}
+
+.colors button {
+	height: 35px;
+}
+
+.magic-box {
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-radius: 0.5%;
+	height: 635px;
+	width: 635px;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.footer {
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+
+.white, .white:hover, .white:active, .white:focus {
+	background-color: white;
+}
+
+.yellow, .yellow:hover, .yellow:active, .yellow:focus {
+	background-color: yellow;
+}
+
+.green, .green:hover, .green:active, .green:focus {
+	background-color: green;
+}
+
+.lightblue, .lightblue:hover, .lightblue:active, .lightblue:focus {
+	background-color: lightblue;
+}
+
+.blue, .blue:hover, .blue:active, .blue:focus {
+	background-color: blue;
+}
+
+.magenta, .magenta:hover, .magenta:active, .magenta:focus {
+	background-color: magenta;
+}
+
+.red, .red:hover, .red:active, .red:focus {
+	background-color: red;
+}
+
+.black, .black:hover, .black:active, .black:focus {
+	background-color: black;
+}
