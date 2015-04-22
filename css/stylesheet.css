@@ -1,5 +1,5 @@
 body {
-	padding-top: 50px;
+	padding-top: 20px;
 }
 
 .centered {
@@ -16,10 +16,6 @@ body {
 }
 
 .magic-box {
-	border-style: solid;
-	border-width: 1px;
-	border-color: black;
-	border-radius: 0.5%;
 	height: 635px;
 	width: 635px;
 	display: block;
@@ -27,10 +23,22 @@ body {
 	padding: 0;
 }
 
+.magic-field {
+	outline: #000 1px solid;
+	display: inline-block;
+	margin-top: -3px;
+}
+
 .footer {
 	margin-top: 50px;
 	margin-bottom: 10px;
 }
+
+/*
+=====================================
+ Colors
+=====================================
+*/
 
 .white, .white:hover, .white:active, .white:focus {
 	background-color: white;
@@ -63,3 +71,4 @@ body {
 .black, .black:hover, .black:active, .black:focus {
 	background-color: black;
 }
+
