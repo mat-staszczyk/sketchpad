@@ -3,7 +3,7 @@ var mbHeight = parseFloat($('.magic-box').css('height'));
 var rows = 32;
 var columns = 32; 
 var startColor = "white";
-
+var usedColor = "black";
 
 
 var setFields = function (r, c) {
@@ -19,7 +19,11 @@ $(document).ready(function() {
 		$('.magic-box').append('<div class="magic-field"></div>');
 	}
 	$('.magic-field').css('background-color', startColor);
-
+	$('div.magic-field').mouseenter(function() {
+		$(this).css('background-color', usedColor);
+	});
 	setFields(rows, columns);
 })
+
+
 
