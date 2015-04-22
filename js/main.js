@@ -2,8 +2,8 @@ var mbWidth = parseFloat($('.magic-box').css('width'));
 var mbHeight = parseFloat($('.magic-box').css('height'));
 var rows = 16;
 var columns = 16; 
-var startColor = "white";
-var usedColor = "black";
+var startColor = "#888";
+var usedColor = "white";
 
 
 var setFields = function (r, c) {
@@ -23,7 +23,7 @@ var createBox = function (rows, columns) {
 
 var paintFields = function () {
 	$('.magic-field').css('background-color', startColor);
-	$('div.magic-field').mouseenter(function() {
+	$('div.magic-field').hover(function() {
 		$(this).css('background-color', usedColor);
 	});
 }
