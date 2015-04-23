@@ -21,14 +21,6 @@ var createBox = function (rows, columns) {
 		$('.magic-box').append('<div class="magic-field"></div>');
 	}
 }
-/*
-var paintFields = function () {
-	$('.magic-field').css('background-color', startColor);
-	$('div.magic-field').hover(function() {
-		$(this).css('background-color', usedColor);
-	});
-}
-*/
 
 var paintFields = function () {
 	$('.magic-field').css('background-color', startColor);
@@ -40,8 +32,8 @@ var paintFields = function () {
 }
 
 var userFields = function () {
-	var r = prompt("Specify the number of rows (1-90):\n(Warning: Large values display could be really slow.)");
-	if (isNaN(r) || isNaN(c)) {
+	var r = prompt("Specify the number of rows (1-90):\n(Warning: Large values could be really slow.)");
+	if (isNaN(r)) {
 		alert("The value must be a number, mate!");
 		return false;
 	} else if (r < 1 || r > 100) {
