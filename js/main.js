@@ -2,9 +2,8 @@ var mbWidth = parseFloat($('.magic-box').css('width'));
 var mbHeight = parseFloat($('.magic-box').css('height'));
 var rows = 16;
 var columns = 16; 
-var startColor = "#888";
+var startColor = "#C9C9C9";
 var usedColor = "white";
-
 
 var setFields = function (r, c) {
 	var boxWidth = (mbWidth / c) + 'px';
@@ -43,11 +42,12 @@ var userFields = function () {
 	setFields(r, r);
 }
 
+var reset = function () {
+	$('.magic-field').css('background-color', startColor);
+}
+
 $(document).ready(function() {
 	createBox(rows, columns);
 	paintFields();
 	setFields(rows, columns);
 })
-
-
-
