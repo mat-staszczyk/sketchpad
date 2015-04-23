@@ -7,8 +7,8 @@ var usedColor = "white";
 
 
 var setFields = function (r, c) {
-	var boxWidth = ((mbWidth-2) / c) + 'px';
-	var boxHeight = ((mbHeight-2) / r) + 'px';
+	var boxWidth = (mbWidth / c) + 'px';
+	var boxHeight = (mbHeight / r) + 'px';
 	$('.magic-field').css('width', boxWidth);
 	$('.magic-field').css('height', boxHeight);
 }
@@ -16,7 +16,8 @@ var setFields = function (r, c) {
 var createBox = function (rows, columns) {
 	$('div.magic-field').remove();
 	var i;
-	for (i = 0; i < columns * rows; i++) {
+	var boxes = columns * rows
+	for (i = 0; i < boxes; i++) {
 		$('.magic-box').append('<div class="magic-field"></div>');
 	}
 }

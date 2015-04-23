@@ -20,12 +20,11 @@ body {
 	max-width: 1635px;
 	padding: 0px;
 	margin: 0 auto;
-
+	line-height: 0;
 }
 
 .magic-field {
 	display: inline-block;
-	margin-top: -5px;
 }
 
 .footer {
