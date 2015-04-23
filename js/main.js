@@ -22,11 +22,11 @@ var createBox = function (rows, columns) {
 	}
 }
 
-var paintFields = function () {
+var paintFields = function (color) {
 	$('.magic-field').css('background-color', startColor);
   	$('.magic-box').on('mouseover', 'div', function() {
         if(clicked) {
-            $(this).css('background-color', usedColor);
+            $(this).css('background-color', color);
         }
     })
 }
@@ -41,12 +41,16 @@ var userFields = function () {
 		return false;
 	}
 	createBox(r, r);
-	paintFields();
+	paintFields(usedColor);
 	setFields(r, r);
 }
 
 var reset = function () {
 	$('.magic-field').css('background-color', startColor);
+}
+
+var random = function () {
+	return false;
 }
 
 $(document).ready(function() {
@@ -56,7 +60,11 @@ $(document).ready(function() {
 		clicked = false;
 	});
 
+	$('.colors button').click(function() {
+		paintFields(usedColor);
+	});
+
 	createBox(rows, columns);
-	paintFields();
+	paintFields(usedColor);
 	setFields(rows, columns);
 })
