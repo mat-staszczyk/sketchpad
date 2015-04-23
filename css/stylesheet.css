@@ -17,10 +17,16 @@ body {
 
 .magic-box {
 	height: 635px;
-	max-width: 1635px;
+	width: 635px;
 	padding: 0px;
 	margin: 0 auto;
 	line-height: 0;
+	cursor: crosshair;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none; 
 }
 
 .magic-field {
@@ -28,6 +34,7 @@ body {
 }
 
 .footer {
+	position: 
 	margin-top: 50px;
 	margin-bottom: 10px;
 }

@@ -1,9 +1,10 @@
 var mbWidth = parseFloat($('.magic-box').css('width'));
 var mbHeight = parseFloat($('.magic-box').css('height'));
-var rows = 16;
-var columns = 16; 
+var rows = 32;
+var columns = 32; 
 var startColor = "#C9C9C9";
 var usedColor = "white";
+var clicked = false;
 
 var setFields = function (r, c) {
 	var boxWidth = (mbWidth / c) + 'px';
@@ -20,17 +21,27 @@ var createBox = function (rows, columns) {
 		$('.magic-box').append('<div class="magic-field"></div>');
 	}
 }
-
+/*
 var paintFields = function () {
 	$('.magic-field').css('background-color', startColor);
 	$('div.magic-field').hover(function() {
 		$(this).css('background-color', usedColor);
 	});
 }
+*/
+
+var paintFields = function () {
+	$('.magic-field').css('background-color', startColor);
+  	$('.magic-box').on('mouseover', 'div', function() {
+        if(clicked) {
+            $(this).css('background-color', usedColor);
+        }
+    })
+}
 
 var userFields = function () {
 	var r = prompt("Specify the number of rows (1-90):\n(Warning: Large values display could be really slow.)");
-	if (isNaN(r)) {
+	if (isNaN(r) || isNaN(c)) {
 		alert("The value must be a number, mate!");
 		return false;
 	} else if (r < 1 || r > 100) {
@@ -47,6 +58,12 @@ var reset = function () {
 }
 
 $(document).ready(function() {
+	$(document).mousedown(function() {
+		clicked = true;
+	}).mouseup(function() {
+		clicked = false;
+	});
+
 	createBox(rows, columns);
 	paintFields();
 	setFields(rows, columns);
