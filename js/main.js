@@ -29,12 +29,12 @@ var paintFields = function () {
 }
 
 var userFields = function () {
-	var r = prompt("Specify the number of rows:");
+	var r = prompt("Specify the number of rows (1-90):\n(Warning: Large values display could be really slow.)");
 	if (isNaN(r)) {
 		alert("The value must be a number, mate!");
 		return false;
-	} else if (r < 1 || r > 64) {
-		alert("The value must be a number between 1 and 64.");
+	} else if (r < 1 || r > 100) {
+		alert("The value must be a number between 1 and 90.");
 		return false;
 	}
 	createBox(r, r);
