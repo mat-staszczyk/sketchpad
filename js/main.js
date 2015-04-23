@@ -3,8 +3,9 @@ var mbHeight = parseFloat($('.magic-box').css('height'));
 var rows = 32;
 var columns = 32; 
 var startColor = "#C9C9C9";
-var usedColor = "white";
+var usedColor = "black";
 var clicked = false;
+var rand = false;
 
 var setFields = function (r, c) {
 	var boxWidth = (mbWidth / c) + 'px';
@@ -26,6 +27,11 @@ var paintFields = function (color) {
 	$('.magic-field').css('background-color', startColor);
   	$('.magic-box').on('mouseover', 'div', function() {
         if(clicked) {
+        	if (rand) {
+        		$(document).mousemove(function() {
+					color = random();
+				});
+        	}
             $(this).css('background-color', color);
         }
     })
@@ -50,7 +56,11 @@ var reset = function () {
 }
 
 var random = function () {
-	return false;
+	var r = Math.floor((Math.random() * 255));
+	var g = Math.floor((Math.random() * 255));
+	var b = Math.floor((Math.random() * 255));
+	var rgb = "rgb(" + r + "," + g + "," + b +")";
+	return rgb;
 }
 
 $(document).ready(function() {
@@ -62,6 +72,18 @@ $(document).ready(function() {
 
 	$('.colors button').click(function() {
 		paintFields(usedColor);
+	});
+
+
+	$('.random').on('click', function () {
+		if (!rand) {
+			rand = true;
+			$(this).addClass('active');
+		} else {
+			rand = false;
+			$(this).removeClass('active');
+			paintFields("black");
+		}
 	});
 
 	createBox(rows, columns);
