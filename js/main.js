@@ -6,6 +6,7 @@ var startColor = "#C9C9C9";
 var usedColor = "black";
 var clicked = false;
 var rand = false;
+var erase = false;
 var temp;
 
 var setFields = function (r, c) {
@@ -82,10 +83,23 @@ $(document).ready(function() {
 			$(this).addClass('active');
 		} else {
 			rand = false;
-			$(this).removeClass('active');
 			paintFields(temp);
+			$(this).removeClass('active');
 		}
 	});
+
+	$('.eraser').on('click', function () {
+		if (!erase) {
+			erase = true;
+			paintFields(usedColor);
+			$(this).addClass('active');
+		} else {
+			erase = false;
+			paintFields(temp);
+			$(this).removeClass('active');
+		}
+	});
+
 
 	createBox(rows, columns);
 	paintFields(usedColor);
