@@ -1,9 +1,16 @@
+// Starting grid dimension
+var rows = 16;
+var columns = 16; 
+
+// Check the box dimension
 var mbWidth = parseFloat($('.magic-box').css('width'));
 var mbHeight = parseFloat($('.magic-box').css('height'));
-var rows = 32;
-var columns = 32; 
+
+// Color settings
 var startColor = "#C9C9C9";
 var usedColor = "black";
+
+// Operating variables
 var clicked = false;
 var rand = false;
 var erase = false;
