@@ -80,6 +80,10 @@ $(document).ready(function() {
 	});
 
 	$('.colors button').click(function() {
+		erase = false;
+		rand = false;
+		$('.eraser').removeClass('active');
+		$('.random').removeClass('active');
 		paintFields(usedColor);
 	});
 
