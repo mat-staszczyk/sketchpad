@@ -86,6 +86,8 @@ $(document).ready(function() {
 
 	$('.random').on('click', function () {
 		if (!rand) {
+			erase = false;
+			$('.eraser').removeClass('active');
 			rand = true;
 			$(this).addClass('active');
 		} else {
