@@ -90,7 +90,7 @@ $(document).ready(function() {
 
 	$('.random').on('click', function () {
 		if (!rand) {
-
+			usedColor = random();
 			erase = false;
 			$('.eraser').removeClass('active');
 			rand = true;
