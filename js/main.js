@@ -14,7 +14,7 @@ var usedColor = "black";
 var clicked = false;
 var rand = false;
 var erase = false;
-var temp;
+var temp = usedColor;
 
 var setFields = function (r, c) {
 	var boxWidth = (mbWidth / c) + 'px';
@@ -97,6 +97,8 @@ $(document).ready(function() {
 
 	$('.eraser').on('click', function () {
 		if (!erase) {
+			rand = false;
+			$('.random').removeClass('active');
 			erase = true;
 			paintFields(usedColor);
 			$(this).addClass('active');
