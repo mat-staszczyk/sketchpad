@@ -16,6 +16,9 @@ var rand = false;
 var erase = false;
 var temp = usedColor;
 
+
+// Set the size of the pixel based 
+// on the current size of the grid
 var setFields = function (r, c) {
 	var boxWidth = (mbWidth / c) + 'px';
 	var boxHeight = (mbHeight / r) + 'px';
@@ -23,6 +26,7 @@ var setFields = function (r, c) {
 	$('.magic-field').css('height', boxHeight);
 }
 
+// Generate the grid and set base color
 var createBox = function (rows, columns) {
 	$('div.magic-field').remove();
 	var i;
@@ -33,9 +37,12 @@ var createBox = function (rows, columns) {
 	$('.magic-field').css('background-color', startColor);
 }
 
+// Changes the color of pixels you move the cursor 
+// when the mouse button is pressed
 var paintFields = function (color) {
   	$('.magic-box').on('mouseover', 'div', function() {
         if(clicked) {
+        	// Random color functionality
         	if (rand) {
         		$(document).mousemove(function() {
 					color = random();
