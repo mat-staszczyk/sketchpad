@@ -34,7 +34,6 @@ var createBox = function (rows, columns) {
 	for (i = 0; i < boxes; i++) {
 		$('.magic-box').append('<div class="magic-field"></div>');
 	}
-	$('.magic-field').css('background-color', startColor);
 }
 
 // Changes the color of pixels you move the cursor 
