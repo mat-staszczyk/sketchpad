@@ -52,7 +52,7 @@ var paintFields = function (color) {
     })
 }
 
-
+// Specify the size of the grid
 var userFields = function () {
 	var r = prompt("Specify the number of rows (1-64):\n(Warning: Large values could be really slow.)");
 	if (isNaN(r)) {
