@@ -36,7 +36,7 @@ var createBox = function (rows, columns) {
 	}
 }
 
-// Changes the color of pixels you move the cursor 
+// Change the color of pixels you move the cursor 
 // when the mouse button is pressed
 var paintFields = function (color) {
   	$('.magic-box').on('mouseover', 'div', function() {
@@ -51,6 +51,7 @@ var paintFields = function (color) {
         }
     })
 }
+
 
 var userFields = function () {
 	var r = prompt("Specify the number of rows (1-64):\n(Warning: Large values could be really slow.)");
