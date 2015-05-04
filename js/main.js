@@ -67,6 +67,7 @@ var userFields = function () {
 	setFields(r, r);
 }
 
+// Clean the grid
 var reset = function () {
 	$('.magic-field').css('background-color', startColor);
 }
