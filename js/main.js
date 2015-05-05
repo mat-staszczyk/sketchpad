@@ -72,6 +72,7 @@ var reset = function () {
 	$('.magic-field').css('background-color', startColor);
 }
 
+// Generate and return random color in CSS value form
 var random = function () {
 	var r = Math.floor((Math.random() * 255));
 	var g = Math.floor((Math.random() * 255));
