@@ -1,4 +1,4 @@
-// Starting grid dimension
+// Grid's starting dimension
 var rows = 16;
 var columns = 16; 
 
