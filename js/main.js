@@ -82,6 +82,7 @@ var random = function () {
 }
 
 $(document).ready(function() {
+	// variable needed to trigger painting on click
 	$(document).mousedown(function() {
 		clicked = true;
 	}).mouseup(function() {
